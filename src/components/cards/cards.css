@@ -1,0 +1,186 @@
+:root {
+    --cardC1: rgb(255, 0, 0);
+    --cardC2: rgb(145, 255, 0);
+    --cardC3: rgb(0, 0, 255);
+    --cardC4: rgb(255, 255, 0);
+    --cardC5: rgb(255, 0, 255);
+    --cardC6: rgb(255, 179, 0);
+    --cardC7: rgb(23, 169, 0);
+    --cardC8: rgb(255, 0, 106);
+    --cardC9: rgb(43, 29, 131);
+    --cardC0: rgb(0, 174, 255);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+main {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+
+}
+
+.column {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+.imgCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4; 
+
+    overflow: hidden; 
+    height: fit-content;
+    transition: all 400ms ease-in-out;
+
+    margin-bottom: 30px;
+}
+
+
+.imgCard:hover{
+    .photos {
+        opacity: 100%;
+        
+    }
+    .likes {
+        opacity: 100%;
+        
+    }
+    .image {
+        opacity: 70%;
+    }
+    .visitBT {
+        opacity: 100%;
+    }
+}
+
+
+.image {
+    width: 95%;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.595);
+    opacity: 100%;
+    
+
+}
+
+.userImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--cardColor);
+    position: absolute;
+    bottom: 70px;
+    left: 30%;
+    z-index: 1;
+}
+
+.likes {
+    border-radius: 15px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.334);
+    color: var(--cardColor);
+    opacity: 0%;
+    transition: all 300ms;
+    transform: scale(1);
+    cursor: pointer;
+
+}
+
+.likes:hover {
+    transform: scale(1.1);
+}
+
+.photos {
+    border-radius: 15px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.334);
+    color: var(--cardColor);
+    opacity: 0%;
+    transition: all 300ms;
+    
+
+    
+
+}
+
+.cardFooter {
+    padding-top: 30px;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visitBT {
+    background-color: rgb(140, 0, 0);
+    color: var(--colorBGgeneral);
+    width: 55px;
+    margin-right: 10px;
+    margin-left: 10px;
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    opacity: 0%;
+    cursor: pointer;
+    
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--colorBGgeneral);
+}
+
+.userImageFoot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* border: 3px solid var(--cardColor); */
+    position: absolute;
+    top: -30px;
+    left: 35%;
+    z-index: 1;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.595);
+    
+}
+
+h4 {
+    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: small;
+}
+
+h5 {
+    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: small;
+    color: rgb(72, 72, 72);
+}
