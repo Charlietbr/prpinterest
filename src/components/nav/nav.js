@@ -20,10 +20,17 @@ export const createUpperNav = () => {
 
 export const createLogo = () => {
     const upperNav = document.querySelector('nav') || createUpperNav();
+    
+    const linkLogo = document.createElement('a');
+    linkLogo.href = './index.html';
+
     const logo = document.createElement('img');
-    upperNav.appendChild(logo);
     logo.src = "./src/icons/pinteresanteLogo.png";
     logo.alt = "logo";
+
+    linkLogo.appendChild(logo);
+    upperNav.appendChild(linkLogo);
+
     return logo;
 };
 
@@ -34,19 +41,14 @@ export const createInicioBt = () => {
     const reloadA = document.createElement('a');
     reloadA.href = './index.html';
     reloadA.textContent = 'Inicio';
-    upperNav.appendChild(inicioBt);
     inicioBt.appendChild(reloadA);
+    upperNav.appendChild(inicioBt);
     inicioBt.classList.add("buttonGenM", "ocultable");
     // inicioBt.textContent = "Inicio";
     inicioBt.id = 'inicioBT';
     return inicioBt;
 };
 
-
-    
-    
- 
-    
 
 
 export const createExplorarBt = () => {
@@ -68,7 +70,7 @@ export const createCrearBt = () => {
     return crearBt;
 };
 
-export let searchInput;
+export let searchInput = null;
 
 export const createSearchInput = () => {
     const upperNav = document.querySelector('nav') || createUpperNav();
@@ -79,15 +81,6 @@ export const createSearchInput = () => {
     return searchInput;
 
 };
-
-export let searchValue;
-
-export const getSearchValue = () => {
-    searchValue = searchInput ? searchInput.value : '';
-    return searchValue;
-}
-
-
 
 
 export const createNotificationsBt = () => {
@@ -134,7 +127,6 @@ export function paintHeader() {
 
 };
 
-// export let topic;
 
 let topic;
 

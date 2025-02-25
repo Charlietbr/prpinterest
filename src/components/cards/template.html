@@ -1,0 +1,11 @@
+<article class="imgCard">
+    <img src="${card.urlRegular}" class="image" alt="${card.slug}" title="${card.slug}">
+    <p class="likes">♥️ ${card.likes}</p>
+    <p class="photos">♥️ ${card.totalPhotos} 📷</p>
+    <button class="visitBT"><a href="${card.urlRegular}">Visitar</a></button>
+    <footer class="cardFooter">
+        <img src="${card.userImg}" alt="${card.user}" title="${card.user}" style="border: 3px solid var(--cardC${cifra})">
+        <h4 class="userName">${card.user}</h4>
+        <h5 class="userName">${card.createdAt}</h5>
+    </footer>
+</article>

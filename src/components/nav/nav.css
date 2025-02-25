@@ -44,6 +44,11 @@ button:hover{
 
 nav img{
     height: 25px;
+    transition: all 300ms;
+}
+
+nav img:hover {
+    transform: scale(1.2);
 }
 
 nav input[type='search'] {
